@@ -15,7 +15,7 @@ tests: ${BINARIES}
 runMovies: main.o movie.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
-movie.o: movies.cpp movies.h
+movies.o: movies.cpp movies.h
 	${CXX} movies.cpp -c
 runMovies.o: main.cpp movies.h 
 	${CXX} main.cpp -c
