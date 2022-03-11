@@ -1,6 +1,6 @@
 // Winter'22
 // Instructor: Diba Mirza
-// Student name: 
+// Student name: Madhav Rai
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -210,7 +210,23 @@ for(int i = 0; i<(int) moves.size() ; i++)
 return 0;
 }
 
-/* Add your run time analysis for part 3 of the assignment here as commented block*/
+/*
+In the worst case, each of the m prefix strings will be a. prefix to all of the movies. In that case, this algorithm goes through M prefixes and stores them in a vector and initiates a vector<vector<Movie>> and adds an empty vector for each of the M prefixes. That would take O(2m) time
+
+Then one forloop initiates a vector<string> and adds  a comma separated string with the name and rating and for the vector<vector<Movie>>. In addition, for each of the n strings, it checks if each prefix matches and pushes each string to vector<vector<Movie>> at the index corresponding to the index of the prefix in a vector prefixes<string> this takes
+O(n*m + n) -> O(n*m) time
+For each vector of movies matching indexed to the correct, this algorithm overloads operators to order by rating and name to ensure correct order of the vector
+In the worst case, n elements in each vector matching to prefix so that sorting process would take 
+O(nlognm) time plus O(n*m) to traverse vectors for output
+
+Since O(n*logn*m) is the biggest term, that is the overall run-time complexity of the system
+
+
+
+
+
+
+Add your run time analysis for part 3 of the assignment here as commented block*/
 
 
 
