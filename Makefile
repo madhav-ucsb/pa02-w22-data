@@ -12,7 +12,7 @@ tests: ${BINARIES}
 	./runMovies
 
 
-runMovies: main.o movie.o
+runMovies: main.o movies.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
 movies.o: movies.cpp movies.h
