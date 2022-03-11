@@ -189,13 +189,13 @@ for(int i = 0; i<(int) moves.size() ; i++)
   {
     if((int) moves.at(i).size()>0)
     {
-      if(moves.at(i).at(0).rating!=10.0)
+      if((int) moves.at(i).at(0).rating!=moves.at(i).at(0).rating)
       {
         cout<<"Best movie with prefix "<<prefixes.at(i)<<" is: "<<moves.at(i).at(0).movie<< " with rating "<< moves.at(i).at(0).rating<<endl;
         }
       else
       {
-        cout<<"Best movie with prefix "<<prefixes.at(i)<<" is: "<<moves.at(i).at(0).movie<< " with rating "<< "10.0"<<endl;
+        cout<<"Best movie with prefix "<<prefixes.at(i)<<" is: "<<moves.at(i).at(0).movie<< " with rating "<< (int) moves.at(i).at(0).rating<<".0"<<endl;
         
       }
         
