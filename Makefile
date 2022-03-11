@@ -15,9 +15,9 @@ tests: ${BINARIES}
 runMovies: main.o movie.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
-movie.o: movie.cpp movie.h
+movie.o: movies.cpp movies.h
 	${CXX} movie.cpp -c
-runMovies.o: main.cpp movie.h 
+runMovies.o: main.cpp movies.h 
 	${CXX} main.cpp -c
 clean:
 	/bin/rm -f ${BINARIES} *.o
