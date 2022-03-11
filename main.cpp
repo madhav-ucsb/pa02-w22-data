@@ -1,6 +1,6 @@
 // Winter'22
 // Instructor: Diba Mirza
-// Student name: Madhav Rai
+// Student name: 
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -210,23 +210,27 @@ for(int i = 0; i<(int) moves.size() ; i++)
 return 0;
 }
 
-/*
-In the worst case, each of the m prefix strings will be a. prefix to all of the movies. In that case, this algorithm goes through M prefixes and stores them in a vector and initiates a vector<vector<Movie>> and adds an empty vector for each of the M prefixes. That would take O(2m) time
+/* Add your run time analysis for part 3 of the
+In the worst case, each of the m prefixes matched with n strings. My initial forloop will add a comma separated string with name and rating for n strings and check each of the n strings m times to see if they have prefixes
 
-Then one forloop initiates a vector<string> and adds  a comma separated string with the name and rating and for the vector<vector<Movie>>. In addition, for each of the n strings, it checks if each prefix matches and pushes each string to vector<vector<Movie>> at the index corresponding to the index of the prefix in a vector prefixes<string> this takes
-O(n*m + n) -> O(n*m) time
-For each vector of movies matching indexed to the correct, this algorithm overloads operators to order by rating and name to ensure correct order of the vector
-In the worst case, n elements in each vector matching to prefix so that sorting process would take 
-O(nlognm) time plus O(n*m) to traverse vectors for output
+O(n*m+n)->O(n*m) in this step
+The Movies will then each be stored in a vector of vector of movies m times since they will match all prefixes. Each of the m vectors needs to be sorted. If each has n vectors in the worst case, that is
+O(n*logn*m)
 
-Since O(n*logn*m) is the biggest term, that is the overall run-time complexity of the system
+And then it is O(n*m) to traverse through each vector in the vector of vector of movies to deliver output
 
+O(n*m)
 
+All the rest is just initializing or assign var so
+O(1)
 
+Biggest term is O(n*logn*m) so time complexity is O(n*logn*m)
 
-
-
-Add your run time analysis for part 3 of the assignment here as commented block*/
+In general, it will be minimum O(k*m + m) + from n=1 to k=n summation of (xnlogxn) where xn represents the number of movies that have the nth prefix
+assignment here as commented block
+If it's the ordered case with no prefix string, it's just 
+O(n)
+*/
 
 
 
