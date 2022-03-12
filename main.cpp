@@ -157,7 +157,7 @@ for(int i = 0; i<(int) moves.size(); i++)
   if(moves.at(i).size()==0)
   {
     cout<<"No movies found with prefix "<<prefixes.at(i) << endl<<endl;
-    return 0;
+    //return 0;
     }
     
 }
